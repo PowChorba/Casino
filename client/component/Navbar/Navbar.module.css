@@ -4,11 +4,14 @@
     align-items: center;
     padding: 20px;
     color: white;
+    background: #121e26;
 }
 
 .title{
     font-size:3rem;
-    color: white
+    color: white;
+    background: #121e26;
+    
 }
 
 .right{

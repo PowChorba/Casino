@@ -15,7 +15,7 @@ export default function Navbar() {
           <option value="AR">ES-AR</option>
           <option value="US">EN-US</option>
         </select>
-        <button className={s.register}>Registrarse</button>
+        <button onClick={() => router.push('/register')} className={s.register}>Registrarse</button>
         <button onClick={() => router.push('/login')} className={s.login}>Iniciar sesion</button>
       </div>
     </div>

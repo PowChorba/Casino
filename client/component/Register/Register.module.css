@@ -1,0 +1,124 @@
+.container {
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    place-items: center;
+    background: #121e26;
+    color: white;
+}
+
+.divLeft{
+    height: 100%;
+    width: 100%;
+    background:url('../../assets/bannerDos.webp');
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.divLeft > span {
+    background: none;
+    color:#00be7c;
+    font-weight: 700;
+}
+
+.divLeft > h3, .divLeft > span{
+    background: none;
+    padding: 5px 0px;
+}
+
+.divRight {
+    height: 100%;
+    background:none;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+
+.divRight > div > p {
+    color: #a3b4be;
+    background: none;
+}
+
+/* DIVS QUE SEPARAN LA PARTE DERECHA */
+.divRight > div, .divRightTop > h3 {
+    background: none;
+}
+
+.divRightCenter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.divRightCenter > p > a {
+    background: none;
+    color: #ffff;
+}
+
+.divRightCenter > p > a:hover {
+    color:#00be7c;
+}
+
+.title {
+    font-size: 1.75rem;
+}
+
+.buttonSocial {
+    padding: 10px 20px;
+    color: #ffff;
+    background: rgba(163,180,190,.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonSocial:hover{
+    background: rgba(163, 180, 190, 0.459);
+}
+
+.login{
+    background: none;
+    color: #a3b4be;
+
+}
+
+.login > a {
+    background: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+.login > a:hover {
+    color:#00be7c;
+}
+
+
+
+/* PARA EL FORMULARIO  */
+
+.input {
+    background: rgba(163,180,190,.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: #ffff
+}
+
+.buttonCreate{
+    cursor: pointer;
+    color: white;
+    background: #00be7c;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
