@@ -1,0 +1,55 @@
+.containerList {
+    background: #121e26;
+    overflow-y: scroll;
+    height: 90vh;
+    min-height: 90vh;
+    /* background: none; */
+}
+
+.cardsContainer {
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-content: center;
+    background: none;
+    gap: 5px;
+}
+
+/* CARDS */
+.container {
+   padding: 5px;  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: none;
+}
+
+.container > img {
+    border-radius: 10px;
+}
+
+.containerList::-webkit-scrollbar{
+    width: 10px;
+}
+
+.containerList::-webkit-scrollbar-track{
+    background: rgba(255, 0, 0, 0);
+}
+
+.containerList::-webkit-scrollbar-thumb{
+    background-color: #007c51;
+    border-radius: 10px;
+}
+
+.divInput {
+    background: none;
+    padding: 5px;
+}
+
+.inputList {
+    width: 25%;
+    border: 1px solid rgba(163,180,190,.1);
+    border-radius: 10px;
+    padding: 10px;
+    background:rgba(163,180,190,.1);
+    color: #ffff;
+}

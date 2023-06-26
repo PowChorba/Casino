@@ -6,7 +6,7 @@ export default function RegisterForm() {
       <input type="text" placeholder="Username" className={s.input} />
       <input type="email" placeholder="Email Address" className={s.input} />
       <input type="password" placeholder="Password" className={s.input} />
-      <button className={s.buttonCreate} type="submit">Create Account</button>
+      <button className={s.buttonCreate} type="submit" disabled={true}>Create Account</button>
     </>
   );
 }

@@ -75,8 +75,28 @@ def delete_row():
             data = data.drop(index=index)
             data.to_csv('casino.csv', index=False)            
 
+def provedores():
+    driver = webdriver.Chrome()
+    driver.get('https://cbet.gg/es-MX/casinos/casino/grid?provider_ids=0&sorting_preset=1')
+    driver.maximize_window()
+    sleep(10)
+    counter = 1
+    while counter < 50:
+        # div_container = driver.find_element(By.XPATH, f'//*[@id="app"]/div[1]/aside/div[2]/div[2]/div[{counter}]')
+        try:
+            img = driver.find_element(By.XPATH, f'//*[@id="app"]/div[1]/aside/div[2]/div[2]/div[{counter}]/div[1]/img').get_attribute('src')
+            # img = f'https://cbet.gg/{img}'
+            name = driver.find_element(By.XPATH, f'//*[@id="app"]/div[1]/aside/div[2]/div[2]/div[{counter}]/div[1]/div').text
+            with open('provedores.csv', 'a', encoding='UTF-8', newline='') as f:
+                write = writer(f)
+                write.writerow([name,img])
+            counter += 1
+        except:
+            print('[-] Error en la busqueda')    
+            counter += 1    
+
     
-delete_row()    
+provedores()    
 
 
 # XPATH DE "FUND PLAY" >>> //*[@id="app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/div[1]/div[2]/button[2]/span[1]

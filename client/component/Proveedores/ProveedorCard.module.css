@@ -1,0 +1,68 @@
+.container {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+    padding: 15px;
+    background: #121e26;
+    cursor: pointer;
+}
+
+.container > span {
+    background: #121e26;
+}
+
+.divName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #121e26;
+}
+
+
+.container:hover {
+    border-left: 3px solid #007c51;
+}
+
+.divName > h4, .divName > img {
+    background: #121e26;
+}
+
+
+/* Lista de todos los provedores */
+.containerList {
+    background: #121e26;
+    /* width: 12%; */
+    overflow-y: scroll;
+    height: 90vh;
+    min-height: 90vh;
+}
+
+.containerList::-webkit-scrollbar{
+    width: 5px;
+}
+
+.containerList::-webkit-scrollbar-track{
+    background: rgba(255, 0, 0, 0);
+}
+
+.containerList::-webkit-scrollbar-thumb{
+    background-color: rgba(163,180,190,.1);
+    border-radius: 10px;
+}
+
+.divInput {
+    background: none;
+    padding: 5px;
+}
+
+.inputList {
+    width: 100%;
+    border: 1px solid rgba(163,180,190,.1);
+    border-radius: 10px;
+    padding: 10px;
+    background:rgba(163,180,190,.1);
+    color: #ffff;
+}
