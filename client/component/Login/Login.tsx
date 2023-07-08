@@ -1,10 +1,38 @@
+'use client'
+import { useState } from "react";
 import s from "./Login.module.css";
 import Link from 'next/link'
+import { loginService } from "./service/login.service";
+import { useRouter } from "next/navigation";
 
 export default function LoginComponent() {
+  const router = useRouter()
+  const [error,setError] = useState(false)
+  const [login,setLogin] = useState({
+    email: "",
+    password: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLogin({
+      ...login,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const data = await loginService(login)
+    if(!data?.msg){
+      setError(true)
+    }else {
+      router.push('/')
+    }
+  }
+
   return (
     <>
-      <form className={s.form}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <h3 className={s.title}>Welcome back</h3>
         <span className={s.text}>continue with</span>
         <div>
@@ -28,15 +56,20 @@ export default function LoginComponent() {
           <input
             type="email"
             placeholder="E-mail or Username"
+            name='email'
             className={s.input}
+            onChange={handleChange}
           />
         </div>
         <div className={s.divInput}>
-          <input type="password" placeholder="Password" className={s.input} />
+          <input type="password" placeholder="Password" name='password' className={s.input} onChange={handleChange}/>
         </div>
-        <button type="submit" className={s.button} disabled={true}>
+        <button type="submit" className={s.button} disabled={login.email && login.password ? false :true}>
           Log in
         </button>
+        {
+          error && <div className={s.error}>Email and password dont match</div>
+        }
         <span className={s.text}>Do not have an account? <Link href='/register' className={s.link}>Sign Up</Link></span>
       </form>
     </>

@@ -11,7 +11,7 @@ export const providerRequest = async () => {
 
 export const gamesRequest = async () => {
     try {
-        const api = await axios.get('http://localhost:3001/games')
+        const api = await axios.get('http://localhost:3001/games/1')
         return api.data
     } catch (error) {
         console.log(error)

@@ -9,7 +9,7 @@ export class Games {
     title: string
 
     @Prop()
-    proveeder: string
+    proveedor: string
 
     @Prop()
     img: string

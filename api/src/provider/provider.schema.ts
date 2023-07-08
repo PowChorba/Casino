@@ -10,6 +10,9 @@ export class Provider {
 
     @Prop()
     image: string
+
+    @Prop()
+    gamesLength: number
 }
 
 export const ProviderSchema = SchemaFactory.createForClass(Provider)

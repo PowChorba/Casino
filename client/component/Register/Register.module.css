@@ -156,3 +156,8 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+.error {
+    background: none;
+    color: red;
+}

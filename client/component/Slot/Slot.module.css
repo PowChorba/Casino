@@ -1,0 +1,25 @@
+
+.iframe {
+    border-radius: 20px;
+    border: none;
+}
+
+.containerIframe {
+    width: 50%;
+    margin: 0px auto;
+    padding: 5px 0px;
+    background: none;
+}
+
+.containerInfo {
+    width: 50%;
+    margin: 0px auto;
+    color: #ffff;
+    text-align: center;
+    background: none;
+}
+
+.containerInfo > h2 {
+    font-size: 2rem;
+    background: none;
+}

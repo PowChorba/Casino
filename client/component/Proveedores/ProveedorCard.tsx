@@ -10,7 +10,7 @@ export default function ProveedorCard({ name, image, games }: ProvedorCardType) 
         <Image src={image} alt={name} width={25} height={25} />
         <h4>{name}</h4>
       </div>
-        <span>{games}</span>
+        {/* <span>{games}</span>   */}
     </button>
   );
 }

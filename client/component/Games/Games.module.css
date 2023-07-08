@@ -12,6 +12,7 @@
     align-content: center;
     background: none;
     gap: 5px;
+    padding: 10px 0px;
 }
 
 /* CARDS */
@@ -21,10 +22,16 @@
    justify-content: center;
    align-items: center;
    background: none;
+   cursor: pointer;
 }
 
 .container > img {
     border-radius: 10px;
+}
+
+.container > img:hover {
+    transform: scale(105%);
+    border: 2px solid #007c51;
 }
 
 .containerList::-webkit-scrollbar{
@@ -52,4 +59,18 @@
     padding: 10px;
     background:rgba(163,180,190,.1);
     color: #ffff;
+}
+
+.button {
+    padding: 5px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background:#007c51;
+    margin: 0px auto;
+    width: 100%;
+    cursor: pointer;
+    /* position: absolute;
+    bottom: 0px;
+    left: 50%; */
 }
