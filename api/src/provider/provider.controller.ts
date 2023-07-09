@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { ProviderService } from './provider.service';
 
 @Controller('provider')
@@ -8,5 +8,10 @@ export class ProviderController {
     @Get()
     async getAllProviders(){
         return await this.providerService.allProvider()
+    }
+
+    @Get(':title')
+    getOneProviderByTitle(@Param("title") title: string){
+        return this.providerService.providerTitle(title)
     }
 }

@@ -4,6 +4,8 @@ import s from "./Login.module.css";
 import Link from 'next/link'
 import { loginService } from "./service/login.service";
 import { useRouter } from "next/navigation";
+import { AiOutlineClose } from 'react-icons/ai'
+
 
 export default function LoginComponent() {
   const router = useRouter()
@@ -33,6 +35,9 @@ export default function LoginComponent() {
   return (
     <>
       <form className={s.form} onSubmit={handleSubmit}>
+        <div className={s.divClose}>
+          <AiOutlineClose onClick={() =>router.push('/')}/>
+        </div>
         <h3 className={s.title}>Welcome back</h3>
         <span className={s.text}>continue with</span>
         <div>

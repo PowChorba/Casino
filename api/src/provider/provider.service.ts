@@ -21,5 +21,19 @@ export class ProviderService {
         // return allProvider;
         return await this.providerModel.find();
     }
+
+    async providerTitle(title: string){
+        const providerRequest = await this.providerModel.findOne({
+            name: title
+        })
+        if(providerRequest){
+            const games = await this.gamesModel.find({
+                proveedor: title
+            })
+            return {title,games}
+        }else {
+            throw new Error('No existe el Proveedor')
+        }
+    }
     
 }

@@ -9,6 +9,7 @@
     align-items: center;
     background: #121e26;
     color: white;
+    position: relative;
 }
 
 .title{
@@ -54,4 +55,17 @@
 
 .link:hover {
     color:#00be7c;
+}
+
+.divClose {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid #a3b4be81;
+    cursor: pointer;
 }

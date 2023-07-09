@@ -1,0 +1,8 @@
+.main {
+    height: 100vh;
+}
+
+.divConteiner {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+}

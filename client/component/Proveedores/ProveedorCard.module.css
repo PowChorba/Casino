@@ -8,6 +8,21 @@
     padding: 15px;
     background: #121e26;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.activeContainer {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+    padding: 15px;
+    background: #121e26;
+    cursor: pointer;
+    text-decoration: none;
+    border-left: 3px solid #007c51;
 }
 
 .container > span {
@@ -19,6 +34,15 @@
     align-items: center;
     gap: 5px;
     background: #121e26;
+    
+}
+
+.divNameActive {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #121e26;
+    border-left: 3px solid #007c51;
 }
 
 

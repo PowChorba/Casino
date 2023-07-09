@@ -2,6 +2,7 @@ export interface ProvedorCardType {
     name: string
     image: string
     games: number
+    activeProvider: string
 }
 
 export interface GameCardType {
