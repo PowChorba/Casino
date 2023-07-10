@@ -1,7 +1,10 @@
 
 .iframe {
+    width: 1000px;
+    height: 750px;
     border-radius: 20px;
     border: none;
+    /* z-index: 100; */
 }
 
 .containerIframe {
@@ -22,4 +25,25 @@
 .containerInfo > h2 {
     font-size: 2rem;
     background: none;
+}
+
+.footer {
+    /* background-image: url('../../assets/footer.webp'); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    position: absolute;
+    bottom: 0px;
+    z-index: -10;
+}
+
+.footerAlien {
+    position: absolute;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 1600px){
+    .iframe {
+        width: 800px;
+        height: 600px;
+    }
 }

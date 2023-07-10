@@ -90,3 +90,7 @@
     background:rgba(163,180,190,.1);
     color: #ffff;
 }
+
+@media only screen and (max-width: 1600px){
+
+}

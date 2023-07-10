@@ -1,0 +1,11 @@
+
+.container {
+    width: 100%;
+    background-image: url('../../assets/footer.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.alien {
+    background-image: url('../../assets/footerAlien.webp');
+}
