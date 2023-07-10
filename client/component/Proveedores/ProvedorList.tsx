@@ -24,7 +24,7 @@ export default function ProvedorList({providers, activeProvider}: Props){
         <div className={s.divInput}>
             <input type="text" value={search} placeholder="Search your provider" className={s.inputList} onChange={handleSearch}/>
         </div>
-        <Link href='/' className={activeProvider === undefined ? s.activeContainer : s.container}>
+        <Link href='/' className={activeProvider === 'undefined' ? s.activeContainer : s.container}>
         <div className={s.divName}>
             {/* <Image src={image} alt={name} width={25} height={25} /> */}
             <h4>All providers</h4>

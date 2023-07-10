@@ -8,7 +8,7 @@ export default async function GamePage({ params }: any) {
   return (
     <main>
       <Navbar />
-      <section>
+      <section style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position:'relative'}}>
         <Slot data={data} />
       </section>
     </main>

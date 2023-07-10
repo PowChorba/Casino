@@ -18,9 +18,10 @@ export default function Slot({data}: Props){
                 <h2>{data.title}</h2>
                 <span>{data.proveedor}</span>
             </div>
-            <div className={s.footer}>
+            {/* <div className={s.footer}> */}
             <Image src={Alien} alt='Alien' className={s.footerAlien}/>
-            <Image src={Footer} alt='Alien'/>
-            </div>
+            {/* <Image src={Footer} alt='Alien'/>
+            </div> */}
         </>)
 }
+  

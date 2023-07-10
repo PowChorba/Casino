@@ -86,3 +86,25 @@
         padding: 10px 0px;
     }
 }
+
+@media only screen and (max-width: 1200px){
+    .cardsContainer {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: center;
+        background: none;
+        gap: 5px;
+        padding: 10px 0px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .cardsContainer {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        background: none;
+        gap: 5px;
+        padding: 10px 0px;
+    }
+}

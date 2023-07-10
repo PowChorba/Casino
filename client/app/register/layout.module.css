@@ -2,4 +2,7 @@
     height: 100vh;
     display: grid;
     place-items: center;
+    background: url('../back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

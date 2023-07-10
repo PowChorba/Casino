@@ -13,7 +13,7 @@ export default async function Home() {
     <main className={s.main}>
       <Navbar/>
       <div className={s.divConteiner}>
-        <ProvedorList providers={providers} />
+        <ProvedorList providers={providers} activeProvider='undefined'/>
         <GamesList games={games} />
       </div>
     </main>

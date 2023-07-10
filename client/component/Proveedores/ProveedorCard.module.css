@@ -23,6 +23,7 @@
     cursor: pointer;
     text-decoration: none;
     border-left: 3px solid #007c51;
+    /* border-top: 1px solid #007c51; */
 }
 
 .container > span {
@@ -51,7 +52,7 @@
 }
 
 .divName > h4, .divName > img {
-    background: #121e26;
+    /* background: red; */
 }
 
 
