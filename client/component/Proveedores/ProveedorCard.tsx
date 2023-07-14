@@ -11,7 +11,6 @@ export default function ProveedorCard({ name, image, games,activeProvider }: Pro
         <Image src={image} alt={name} width={25} height={25} />
         <h4>{name}</h4>
       </div>
-        {/* <span>{games}</span>   */}
     </Link>
   );
 }

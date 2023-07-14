@@ -15,7 +15,7 @@ export default async function ProviderHome({params}: any) {
       <Navbar/>
       <div className={s.divConteiner}>
         <ProvedorList providers={providers} activeProvider={actualProvider.title}/>
-        <ProviderGamesList games={actualProvider.games} />
+        <ProviderGamesList games={actualProvider.games} activeProvider={actualProvider.title}/>
       </div>
     </section>
   )

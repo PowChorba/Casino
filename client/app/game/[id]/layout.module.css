@@ -1,6 +1,7 @@
 .main {
-    height: 100vh;
-    background: url('../../back.jpg');
+    /* height: 100vh; */
+    /* background: url('../../back.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background: rgba(99, 101, 102, 0.671);
 }

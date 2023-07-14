@@ -4,6 +4,8 @@ import ProveedorCard from "./ProveedorCard"
 import s from './ProveedorCard.module.css'
 import {useState} from 'react'
 import Link from "next/link"
+import Image from 'next/image'
+import {HiOutlineBars2} from 'react-icons/hi2'
 
 interface Props {
     providers: ProvedorCardType[],
@@ -27,6 +29,7 @@ export default function ProvedorList({providers, activeProvider}: Props){
         <Link href='/' className={activeProvider === 'undefined' ? s.activeContainer : s.container}>
         <div className={s.divName}>
             {/* <Image src={image} alt={name} width={25} height={25} /> */}
+            <HiOutlineBars2 className={s.bars}/>
             <h4>All providers</h4>
         </div>
             {/* <span>{games}</span> */}

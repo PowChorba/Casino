@@ -1,11 +1,28 @@
-
 .container {
-    width: 100%;
-    background-image: url('../../assets/footer.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    height: 20vh;
+    background: #121e26;
+    border-top: 1px solid #007c51;
+    color: #ffff;
 }
 
-.alien {
-    background-image: url('../../assets/footerAlien.webp');
+.divOne {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.list > li {
+    list-style: none;
+    padding: 5px 0px;
+}
+
+.icon {
+    color: #ffff;
+    width: 25px;
+    height: 25px;
 }

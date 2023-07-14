@@ -26,23 +26,16 @@
     /* border-top: 1px solid #007c51; */
 }
 
-.container > span {
-    background: #121e26;
-}
-
 .divName {
     display: flex;
     align-items: center;
     gap: 5px;
-    background: #121e26;
-    
 }
 
 .divNameActive {
     display: flex;
     align-items: center;
     gap: 5px;
-    background: #121e26;
     border-left: 3px solid #007c51;
 }
 
@@ -51,15 +44,16 @@
     border-left: 3px solid #007c51;
 }
 
-.divName > h4, .divName > img {
-    /* background: red; */
+.bars{
+    width: 25px;
+    height: 25px;
 }
 
 
 /* Lista de todos los provedores */
 .containerList {
     background: #121e26;
-    /* width: 12%; */
+    padding: 10px 0px;
     overflow-y: scroll;
     height: 90vh;
     min-height: 90vh;
@@ -90,7 +84,9 @@
     padding: 10px;
     background:rgba(163,180,190,.1);
     color: #ffff;
+    border: 1px solid #007c51
 }
+
 
 @media only screen and (max-width: 1600px){
 

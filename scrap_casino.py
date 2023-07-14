@@ -70,7 +70,7 @@ def replace_link():
 
 def delete_row():
     data = pd.read_csv('casino.csv')
-    for index,link in enumerate(data['Iframe']):
+    for index,link in enumerate(data['iframe']):
         if 'https://roobet.com/game/' in str(link):
             data = data.drop(index=index)
             data.to_csv('casino.csv', index=False)            
@@ -96,7 +96,7 @@ def provedores():
             counter += 1    
 
     
-provedores()    
+delete_row()    
 
 
 # XPATH DE "FUND PLAY" >>> //*[@id="app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/div[1]/div[2]/button[2]/span[1]

@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.results {
+    text-align: center;
+    color:#ffff;
+    font-weight: 700;
+}
+
+.spaan{
+    text-align: center;
+    color:#ffff;
+
+}

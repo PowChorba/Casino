@@ -17,15 +17,15 @@ export default function Navbar() {
         Spicy<Image src={Cohete} alt='SpicyBets' width={75} height={75}/>Bets
       </h1>
       <div className={s.right}>
-        <select className={s.language}>
+        {/* <select className={s.language}>
           <option value="AR">ES-AR</option>
           <option value="US">EN-US</option>
-        </select>
+        </select> */}
         <button onClick={() => router.push('/register')} className={s.register}>Sign Up</button>
         <button onClick={() => router.push('/login')} className={s.login}>Log In</button>
       </div>
       <AiOutlineMenu onClick={() => setMenu(!menu)} className={s.bars}/>
-      {
+      {/* {
         menu && <div className={s.menuResponsive}>
           <div className={s.divTop}>
           <AiOutlineClose/>
@@ -37,7 +37,7 @@ export default function Navbar() {
         <Link href='/register' className={s.linksMenu}>Sign Up</Link>
         <Link href='/login' className={s.linksMenu}>Log In</Link>
       </div>
-      }
+      } */}
     </div>
   );
 }

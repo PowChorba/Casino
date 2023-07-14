@@ -4,6 +4,7 @@ import GameCard from "./GamesCard"
 import s from './Games.module.css'
 import {useEffect, useState} from 'react'
 import { getMoreGames } from "./helper/helper"
+import NotFound from "../NotFound/NotFound"
 
 
 interface Props {
@@ -35,15 +36,22 @@ export default function GamesList({games}: Props){
 
     return(<section className={s.containerList}>
             <div className={s.divInput}>
-             <input type="text" value={search} placeholder="Search your provider" className={s.inputList} onChange={handleSearch}/>
+             <input type="text" value={search} placeholder="Search your favorite game" className={s.inputList} onChange={handleSearch}/>
             </div>
-            <article className={s.cardsContainer}>
+            <h2 className={s.allProviders}>All providers</h2>
+            <article className={filterProviders.length === 0 ? s.notFound :s.cardsContainer}>
                 {
-                    filterProviders.map(e => {
-                        return <GameCard key={e.title} title={e.title} img={e.img} proveedor={e.proveedor} />
-                    })
+                    filterProviders.length === 0 
+                    ? <NotFound/>
+                    : filterProviders.map(e => {
+                            return <GameCard key={e.title} title={e.title} img={e.img} proveedor={e.proveedor} />
+                        })
+                    
                 }
+                
             </article>
-            <button onClick={() => getGames()} className={s.button}>View more</button>
+            {
+                filterProviders.length !== 0 && <button onClick={() => getGames()} className={s.button}>View more</button>
+            }
         </section>)
 }
