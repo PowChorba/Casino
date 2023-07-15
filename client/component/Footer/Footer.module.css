@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    height: 20vh;
+    height: 25vh;
     background: #121e26;
     border-top: 1px solid #007c51;
     color: #ffff;
@@ -25,4 +25,10 @@
     color: #ffff;
     width: 25px;
     height: 25px;
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        font-size: 14px;
+    }
 }

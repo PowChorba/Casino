@@ -1,8 +1,46 @@
 .main {
     height: 100vh;
+    background-image: url('../../back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .divConteiner {
     display: grid;
     grid-template-columns: 0.5fr 3fr;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px){
+    .divConteiner {
+        grid-template-columns: 0.75fr 3fr;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .divConteiner {
+        grid-template-columns: 1fr 2.5fr;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .divConteiner{
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70vh;
+        color: #fff;
+        background: #121e26;
+    }
+
+
 }
