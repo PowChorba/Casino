@@ -31,7 +31,6 @@ export default function GamesList({games}: Props){
         array = array.concat(gamesPage)
         setAllGames(array)
     }
-    console.log(allGames)
     const filterProviders = allGames?.filter(e => e.title?.toLowerCase().includes(search?.toLowerCase()))
 
     return(<section className={s.containerList}>
