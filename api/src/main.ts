@@ -13,7 +13,7 @@ async function bootstrap() {
       'X-Requested-With',
       'Authorization',
     ],
-    origin: ['http://localhost:3000', 'https://casino-production-3e95.up.railway.app/'],
+    origin: ['http://localhost:3000', 'https://casino-production-3e95.up.railway.app'],
   });
   await app.listen(process.env.PORT || 3001);
 }
