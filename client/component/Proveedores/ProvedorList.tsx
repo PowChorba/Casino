@@ -18,7 +18,6 @@ export default function ProvedorList({providers, activeProvider}: Props){
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value)
     }
-    console.log(activeProvider, 'Actiuve Provider')
     const filterProviders = providers.filter(e => e.name.toLowerCase().includes(search.toLowerCase()))
 
     return(

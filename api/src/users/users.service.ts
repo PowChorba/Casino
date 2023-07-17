@@ -11,12 +11,10 @@ export class UsersService {
     constructor(@InjectModel(Users.name) private usersModel: Model<Users>,) {}
 
     async user(data: UsersFormat){
-        console.log('Llego al back')
         const findUser = await this.usersModel.find({
             email: data.email
         })
         if(findUser.length === 0 && data.nickname){
-            console.log('entro al if')
             const newUser = new this.usersModel({
                 email: data.email,
                 password: data.password,

@@ -3,9 +3,10 @@
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    height: 25vh;
+    /* height: 25vh; */
+    padding: 1em;
     background: #121e26;
-    border-top: 1px solid #007c51;
+    border-top: 2px solid rgba(163, 180, 190, 0.1);
     color: #ffff;
 }
 

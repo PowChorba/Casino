@@ -12,8 +12,6 @@ export default async function Home() {
   const providers: ProvedorCardType[] = await providerRequest()
   const games: GameCardType[] = await gamesRequest()
 
-  console.log(process.env.PETICION_BACK, 'ASDASDSD')
-
   return (
     <>
     <main className={s.main}>
