@@ -13,6 +13,9 @@ const nextConfig = {
       },
       {
         hostname: "cdn.hub88.io"
+      },
+      {
+        hostname: "caletagaming.com"
       }
     ],
   },
