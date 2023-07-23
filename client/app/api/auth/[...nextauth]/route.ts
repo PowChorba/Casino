@@ -1,10 +1,10 @@
 import { userData } from "@/helper.service";
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider  from "next-auth/providers/credentials";
 import GoogleProvider from 'next-auth/providers/google'
 import TwitchProvider from 'next-auth/providers/twitch'
 
-export const handler = NextAuth({
+const authOptions: NextAuthOptions = NextAuth({
     providers: [
         CredentialsProvider({
             name: 'credentials',
@@ -47,5 +47,5 @@ export const handler = NextAuth({
         }
     }
 })
-
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST}
