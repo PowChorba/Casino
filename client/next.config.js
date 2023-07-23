@@ -25,7 +25,7 @@ const nextConfig = {
       },
       {
         hostname: 'www.spadegaming.com'
-      }
+      },   
     ],
   },
   env: {
