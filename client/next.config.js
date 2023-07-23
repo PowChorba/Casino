@@ -16,7 +16,10 @@ const nextConfig = {
       },
       {
         hostname: "caletagaming.com"
-      }
+      },
+      {
+        hostname: "www.spadegaming.com"
+      }    
     ],
   },
 };
