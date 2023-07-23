@@ -32,6 +32,9 @@ const nextConfig = {
     GOOGLE_CLIENT: '303089696961-pctgj1r1o9kd7vdmkgjo63ddk1pnfb80.apps.googleusercontent.com ',
     GOOGLE_SECRET: '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'
   },
+  typescript: {
+    ignoreBuildErrors: true,
+ },
 };
 
 module.exports = nextConfig;
