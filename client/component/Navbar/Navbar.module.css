@@ -76,6 +76,10 @@
     background: #007c51;
 }
 
+.imgProfile {
+    border-radius: 50%;
+}
+
 @media only screen and (max-width: 900px){
     .title{
         font-size: 2rem;

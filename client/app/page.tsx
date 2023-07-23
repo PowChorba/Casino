@@ -7,10 +7,12 @@ import ProvedorList from '@/component/Proveedores/ProvedorList'
 import GamesList from '@/component/Games/GamesList'
 import Footer from '@/component/Footer/Footer'
 import Mobile from '@/component/Mobile/Mobile'
+import { getServerSession } from 'next-auth'
 
 export default async function Home() {
   const providers: ProvedorCardType[] = await providerRequest()
   const games: GameCardType[] = await gamesRequest()
+
 
   return (
     <>

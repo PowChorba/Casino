@@ -5,11 +5,28 @@ import {useState} from 'react'
 import RegisterForm from "./RegisterForm";
 import { AiOutlineArrowLeft, AiOutlineClose } from 'react-icons/ai'
 import {useRouter} from 'next/navigation'
+import {signIn, useSession} from 'next-auth/react'
+import { registerSubmit } from "./service/register.service";
 
 export default function RegisterComponent() {
   const [email, setEmail] = useState(false)
   const router = useRouter()
+  const {data: session, status} = useSession()
+  const createWithGoogle = async (provider:string) =>{
+    await signIn(provider)
   
+  }
+  if(status === 'loading'){
+    return
+  }
+  else if(status === 'authenticated' && session.user?.email && session.user.name){
+    const nickname = session.user?.name
+    const email = session.user?.email
+    const password = '18jg9473jlpo'
+    const data =  registerSubmit({nickname,email,password})
+    router.push('/')
+    return
+  }
     return (
     <section className={s.container}>
       <div className={s.divClose}>
@@ -34,7 +51,7 @@ export default function RegisterComponent() {
         {
             !email 
             ? <>
-            <button className={s.buttonSocial}>
+            <button className={s.buttonSocial} onClick={() => createWithGoogle('google')}>
             <svg width="30" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className={s.svg}>
                 <path d="M2 10C2 7.19974 2 5.79961 2.54497 4.73005C3.02433 3.78924 3.78924 3.02433 4.73005 2.54497C5.79961 2 7.19974 2 10 2H12C14.8003 2 16.2004 2 17.27 2.54497C18.2108 3.02433 18.9757 3.78924 19.455 4.73005C20 5.79961 20 7.19974 20 10V12C20 14.8003 20 16.2004 19.455 17.27C18.9757 18.2108 18.2108 18.9757 17.27 19.455C16.2004 20 14.8003 20 12 20H10C7.19974 20 5.79961 20 4.73005 19.455C3.78924 18.9757 3.02433 18.2108 2.54497 17.27C2 16.2004 2 14.8003 2 12V10Z" fill="white"></path>
                 <path d="M7.65943 12.2517L7.24173 13.811L5.71505 13.8433C5.25879 12.997 5 12.0288 5 10.9999C5 10.005 5.24197 9.06674 5.67087 8.2406H5.6712L7.03038 8.48979L7.62578 9.84081C7.50116 10.2041 7.43324 10.5941 7.43324 10.9999C7.43329 11.4404 7.51307 11.8623 7.65943 12.2517Z" fill="#FBBB00"></path>
@@ -45,7 +62,7 @@ export default function RegisterComponent() {
               Google
               <span className={s.spanButton}>asd</span>
               </button>
-            <button className={s.buttonSocial}>
+            <button className={s.buttonSocial} onClick={() => createWithGoogle('twitch')}>
               <svg width="30" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className={s.svg}>
                 <path d="M2 10C2 7.19974 2 5.79961 2.54497 4.73005C3.02433 3.78924 3.78924 3.02433 4.73005 2.54497C5.79961 2 7.19974 2 10 2H12C14.8003 2 16.2004 2 17.27 2.54497C18.2108 3.02433 18.9757 3.78924 19.455 4.73005C20 5.79961 20 7.19974 20 10V12C20 14.8003 20 16.2004 19.455 17.27C18.9757 18.2108 18.2108 18.9757 17.27 19.455C16.2004 20 14.8003 20 12 20H10C7.19974 20 5.79961 20 4.73005 19.455C3.78924 18.9757 3.02433 18.2108 2.54497 17.27C2 16.2004 2 14.8003 2 12V10Z" fill="#9146FF"></path>
                 <path d="M16.1429 11.2857L14.0857 13.3428H12.0286L10.2285 15.1428V13.3428H7.91425V5.62854H16.1429V11.2857Z" fill="white"></path>

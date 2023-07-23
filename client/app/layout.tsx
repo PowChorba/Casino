@@ -1,5 +1,7 @@
+import Provider from "@/component/Provider/Provider";
 import "./globals.css";
 import { Montserrat } from 'next/font/google'
+import Providers from "@/component/Provider/Provider";
 
 export const metadata = {
   title: "SpicyBets",
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

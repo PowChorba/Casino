@@ -3,6 +3,7 @@ import { useState } from "react";
 import s from "./Register.module.css";
 import { registerSubmit } from "./service/register.service";
 import { useRouter } from "next/navigation";
+import {signIn} from 'next-auth/react'
 
 export default function RegisterForm() {
   const router = useRouter()
@@ -22,10 +23,12 @@ export default function RegisterForm() {
   }
 
   const handleSubmit = async () => {
+
     const apiData = await registerSubmit(register)
     if(apiData?.msg){
       setError(true)
     }else {
+      await signIn('credentials', {email: register.email, password: register.password, redirect: false})  
       router.push('/')
     }
   }
