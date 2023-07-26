@@ -4,7 +4,8 @@ import CredentialsProvider  from "next-auth/providers/credentials";
 import GoogleProvider from 'next-auth/providers/google'
 import TwitchProvider from 'next-auth/providers/twitch'
 
-const authOptions: NextAuthOptions = NextAuth({
+const handler = NextAuth({
+    // const authOptions: NextAuthOptions = NextAuth({
     providers: [
         CredentialsProvider({
             name: 'credentials',
@@ -47,5 +48,5 @@ const authOptions: NextAuthOptions = NextAuth({
         }
     }
 })
-const handler = NextAuth(authOptions);
+// const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST}

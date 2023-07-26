@@ -29,3 +29,9 @@ export interface UserLogin {
   email: string
   password: string
 }
+
+export interface Register {
+  nickname: string
+  password: string
+  email: string
+}
