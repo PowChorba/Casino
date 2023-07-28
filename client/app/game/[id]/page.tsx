@@ -9,7 +9,7 @@ export default async function GamePage({ params }: any) {
   const data = await individualGame(params.id);
 
   return (
-    <main>
+    <>
       <Navbar />
       <section className={s.container}>
         <Slot data={data} />
@@ -18,6 +18,6 @@ export default async function GamePage({ params }: any) {
         <Mobile/>
       </div>
       <Footer/>
-    </main>
+    </>
   );
 }
