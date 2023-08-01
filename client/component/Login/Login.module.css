@@ -1,7 +1,7 @@
 .form {
     gap: 1rem;
     width: 25%;
-    height: 50%;
+    height: 65%;
     border-radius: 20px;
     display:flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
     .form {
         gap: 1rem;
         width: 35%;
-        height: 50%;
+        height: 65%;
         border-radius: 20px;
         display:flex;
         flex-direction: column;
@@ -130,7 +130,7 @@
     .form {
         gap: 1rem;
         width: 50%;
-        height: 50%;
+        height: 65%;
         border-radius: 20px;
         display:flex;
         flex-direction: column;

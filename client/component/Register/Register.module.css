@@ -1,6 +1,6 @@
 .container {
     width: 40%;
-    height: 50%;
+    height: 65%;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
