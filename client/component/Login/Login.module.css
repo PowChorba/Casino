@@ -74,6 +74,10 @@
     border-radius: 50%;
 }
 
+.svg {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1600px){
     .form {
         gap: 1rem;
@@ -130,7 +134,7 @@
     .form {
         gap: 1rem;
         width: 50%;
-        height: 65%;
+        height: 90%;
         border-radius: 20px;
         display:flex;
         flex-direction: column;
